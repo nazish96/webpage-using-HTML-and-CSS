@@ -1,12 +1,87 @@
 <html>
 <head>
-<title>Naz</title>
-<link href="style.css" type="text/css" rel="stylesheet">
+	<title>Website Design using HTML and CSS</title>
+	<link href="style.css" type="text/css" rel="stylesheet">
 </head>
-<body><div id="main">
-<h1>Naz website</h1>
-<hr>
-<p> hello! i am doing this for learning purpose</p>
-</div>
+<body>
+	<div class = "main">
+		<nav>
+			<div class ="logo">
+				<img src="images/logo.png">
+			</div>
+			<div class ="nav-links">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Phone</a></li>
+					<li><a href="#">Accessories</a></li>
+					<li><a href="#">Cart</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="information">
+			<div class="overlay"></div>
+			<img src="images/mobile.png" class="mobile">
+			<div id="circle">
+				<div class="feature one">
+					<img src = "images/camera.png">
+					<div>
+						<h1> Camera</h1>
+						<p> 12 MP, wide Angle lens</p>
+					</div>
+				</div>
+				<div class="feature two">
+					<img src = "images/processor.png">
+					<div>
+						<h1>Processor</h1>
+						<p> SnapDragon Octa-core, 11 nm</p>
+					</div>
+				</div>
+				<div class="feature three">
+					<img src = "images/display.png">
+					<div>
+						<h1> Display</h1>
+						<p> 6.5" mini-drop Full-Screen</p>
+					</div>
+				</div>
+				<div class="feature four">
+					<img src = "images/battery.png">
+					<div>
+						<h1> Battery</h1>
+						<p> 5000mAh, 720Hrs, StandBy mode</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="controls">
+			<img src = "images/arrow.png" id="UpBtn">
+			<h1> Features </h1>
+			<img src = "images/arrow.png" id="DownBtn">
+		</div>
+		
+	</div>
+	
+	<script>
+		var circle = document.getElementById("circle");
+		var upBtn = document.getElementById("UpBtn");
+		var downBtn = document.getElementById("DownBtn");
+		
+		var rotateValue = circle.style.transform;
+		var rotateSum;
+		upBtn.onclick = function()
+		{
+			rotateSum = rotateValue + "rotate(-90deg)";
+			circle.style.transform = rotateSum;
+			rotateValue = rotateSum;
+		}
+		
+		downBtn.onclick = function()
+		{
+			rotateSum = rotateValue + "rotate(90deg)";
+			circle.style.transform = rotateSum;
+			rotateValue = rotateSum;
+		}
+		
+	</script>
 </body>
 </html>
